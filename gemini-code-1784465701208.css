@@ -1,0 +1,46 @@
+/* Modern Reset & Base */
+:root {
+    --cream: #FFF8EE;
+    --orange: #FF7A00;
+    --navy: #162A5C;
+    --green: #6CC24A;
+    --white: #FFFFFF;
+    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background-color: var(--cream); color: var(--navy); line-height: 1.6; }
+
+.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+
+/* Loader */
+#loader { position: fixed; inset: 0; background: var(--cream); display: flex; justify-content: center; align-items: center; z-index: 999; }
+
+/* Hero */
+.hero { text-align: center; padding: 40px 0; animation: float 3s ease-in-out infinite; }
+.logo { width: 150px; margin-bottom: 20px; }
+h1 { font-size: 1.8rem; color: var(--navy); margin-bottom: 10px; }
+.btn-main { display: block; background: var(--orange); color: white; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 800; margin-top: 20px; transition: 0.3s; }
+
+/* Features */
+.features { display: flex; gap: 10px; justify-content: space-between; margin: 30px 0; }
+.card { background: var(--white); padding: 15px; border-radius: 20px; text-align: center; flex: 1; box-shadow: var(--shadow); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+
+/* Links Section */
+.link-item { 
+    background: white; padding: 15px 20px; margin-bottom: 15px; border-radius: 15px; 
+    display: flex; align-items: center; justify-content: space-between; 
+    text-decoration: none; color: var(--navy); box-shadow: var(--shadow);
+    transition: 0.3s; position: relative; overflow: hidden;
+}
+.link-item:hover { transform: scale(1.02); border: 2px solid var(--green); }
+
+/* Footer */
+footer { text-align: center; padding: 40px 0; font-size: 0.9rem; opacity: 0.7; }
+
+/* Animations */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.fade-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+.fade-up.active { opacity: 1; transform: translateY(0); }
